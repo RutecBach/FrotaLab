@@ -1,0 +1,34 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "FrotaLab: configurar ambiente",
+      "type": "process",
+      "command": "node",
+      "args": ["${workspaceFolder}/back-end/scripts/configure.mjs"],
+      "options": {
+        "cwd": "${workspaceFolder}/back-end"
+      },
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "silent",
+        "panel": "dedicated"
+      }
+    },
+    {
+      "label": "FrotaLab: preparar banco",
+      "type": "process",
+      "command": "node",
+      "args": ["-r", "ts-node/register", "api/src/persistence/prepare.ts"],
+      "options": {
+        "cwd": "${workspaceFolder}/back-end"
+      },
+      "dependsOn": "FrotaLab: configurar ambiente",
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "silent",
+        "panel": "dedicated"
+      }
+    }
+  ]
+}

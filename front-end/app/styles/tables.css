@@ -1,0 +1,152 @@
+.table-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  padding: 18px 22px;
+  border-bottom: 1px solid var(--line);
+}
+.search-field {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  max-width: 300px;
+  width: 100%;
+  color: #9ba68f;
+}
+.search-field input {
+  border: 0;
+  min-height: 30px;
+  padding: 5px 0;
+  background: transparent;
+  font-size: 11px;
+}
+.search-field input:focus {
+  outline: none;
+}
+.table-meta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  white-space: nowrap;
+  font-size: 10px;
+  color: #9aa38e;
+}
+.table-scroll {
+  overflow-x: auto;
+  width: 100%;
+  max-width: 100%;
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+  text-align: left;
+  white-space: nowrap;
+  font-size: 11px;
+}
+th {
+  font-weight: 600;
+  color: #8a9680;
+  font-size: 9px;
+  text-transform: uppercase;
+  letter-spacing: 0.45px;
+  background: #fcfdf9;
+  border-bottom: 1px solid #e9eee2;
+  padding: 15px 20px;
+}
+td {
+  padding: 17px 20px;
+  border-bottom: 1px solid #edf0e8;
+  color: #6d7d62;
+}
+tbody tr:last-child td {
+  border-bottom: 0;
+}
+tbody tr:hover {
+  background: #fcfdf9;
+}
+td strong {
+  color: #43563a;
+  font-weight: 600;
+}
+.cell-primary {
+  display: flex;
+  flex-direction: column;
+  max-width: 280px;
+  white-space: normal;
+  min-width: 140px;
+}
+.cell-primary strong {
+  font-size: 11px;
+}
+.cell-primary small {
+  margin-top: 4px;
+  color: #9ba38f;
+  font-size: 9px;
+}
+.row-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 4px;
+}
+.actions-col {
+  text-align: right;
+}
+.table-button {
+  padding: 5px 8px;
+  font-size: 10px;
+  color: #6f875f;
+  border: 1px solid #e1e8da;
+  border-radius: 5px;
+  background: #fafcf6;
+  white-space: nowrap;
+}
+.table-button:hover {
+  background: #eaf1e3;
+}
+.table-loading {
+  padding: 15px;
+  text-align: center;
+  color: #98a58c;
+  font-size: 11px;
+}
+.table-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 22px;
+  border-top: 1px solid #edf0e8;
+  font-size: 10px;
+  color: #9da58f;
+}
+.table-footer > div {
+  display: flex;
+  gap: 7px;
+}
+.empty-state {
+  padding: 50px 25px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 12px;
+  color: #9ca88f;
+}
+.empty-state svg {
+  color: #b6c2a8;
+  margin-bottom: 8px;
+}
+.empty-state h2,
+.empty-state h3 {
+  color: #728466;
+  font-size: 18px;
+  font-weight: 500;
+}
+.empty-state p {
+  font-size: 12px;
+  max-width: 400px;
+}
+.empty-state h1 {
+  font-size: 26px;
+}

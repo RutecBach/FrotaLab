@@ -1,0 +1,13 @@
+sequenceDiagram
+  actor Motorista
+  participant Web as Next.js
+  participant API as NestJS
+  participant DB as PostgreSQL
+  participant ERP
+  Motorista->>Web: Concluir rota
+  Web->>API: Sessão e hodômetro
+  API->>DB: Transação de rota e evento
+  DB-->>API: Confirmação
+  API-->>Web: Viagem concluída
+  API->>ERP: Evento idempotente
+  ERP-->>API: Aceite ou falha

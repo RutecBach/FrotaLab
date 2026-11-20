@@ -1,0 +1,66 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "FrotaLab completo",
+      "type": "node",
+      "request": "launch",
+      "runtimeExecutable": "node",
+      "program": "${workspaceFolder}/scripts/dev.mjs",
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal",
+      "autoAttachChildProcesses": true,
+      "skipFiles": ["<node_internals>/**", "${workspaceFolder}/node_modules/**"]
+    },
+    {
+      "name": "1. Banco de dados (PostgreSQL)",
+      "type": "node",
+      "request": "launch",
+      "runtimeExecutable": "node",
+      "program": "${workspaceFolder}/back-end/database/start.mjs",
+      "cwd": "${workspaceFolder}/back-end",
+      "preLaunchTask": "FrotaLab: configurar ambiente",
+      "console": "integratedTerminal",
+      "skipFiles": ["<node_internals>/**", "${workspaceFolder}/node_modules/**"]
+    },
+    {
+      "name": "2. API (NestJS)",
+      "type": "node",
+      "request": "launch",
+      "runtimeExecutable": "node",
+      "runtimeArgs": ["-r", "ts-node/register"],
+      "args": ["${workspaceFolder}/back-end/api/src/main.ts"],
+      "cwd": "${workspaceFolder}/back-end",
+      "envFile": "${workspaceFolder}/back-end/.env",
+      "preLaunchTask": "FrotaLab: preparar banco",
+      "console": "integratedTerminal",
+      "sourceMaps": true,
+      "skipFiles": ["<node_internals>/**", "${workspaceFolder}/node_modules/**"]
+    },
+    {
+      "name": "3. Front-end (Next.js)",
+      "type": "node",
+      "request": "launch",
+      "runtimeExecutable": "node",
+      "program": "${workspaceFolder}/scripts/next.mjs",
+      "args": ["dev"],
+      "cwd": "${workspaceFolder}/front-end",
+      "envFile": "${workspaceFolder}/back-end/.env",
+      "console": "integratedTerminal",
+      "autoAttachChildProcesses": true,
+      "skipFiles": ["<node_internals>/**", "${workspaceFolder}/node_modules/**"]
+    },
+    {
+      "name": "4. ERP de demonstração",
+      "type": "node",
+      "request": "launch",
+      "runtimeExecutable": "node",
+      "program": "${workspaceFolder}/back-end/scripts/erp-demo.mjs",
+      "cwd": "${workspaceFolder}/back-end",
+      "envFile": "${workspaceFolder}/back-end/.env",
+      "preLaunchTask": "FrotaLab: configurar ambiente",
+      "console": "integratedTerminal",
+      "skipFiles": ["<node_internals>/**", "${workspaceFolder}/node_modules/**"]
+    }
+  ]
+}

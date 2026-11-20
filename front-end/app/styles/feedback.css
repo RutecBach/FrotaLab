@@ -1,0 +1,33 @@
+.field-error {
+  color: var(--red);
+  font-size: 12px;
+  display: block;
+  margin: 6px 0;
+}
+.error-box,
+.success-box,
+.notice-box {
+  padding: 13px 16px;
+  border-radius: 7px;
+  font-size: 13px;
+  margin: 15px 0;
+  line-height: 1.6;
+}
+.error-box {
+  background: #fbefeb;
+  color: #934838;
+  border: 1px solid #f0d4ca;
+}
+.success-box {
+  background: #edf4e9;
+  color: #466b43;
+  border: 1px solid #d8e7d1;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+.notice-box {
+  background: #fcf4e5;
+  color: #8c6c3b;
+  border: 1px solid #ecdfc5;
+}

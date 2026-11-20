@@ -1,0 +1,30 @@
+@startuml
+left to right direction
+actor Administrador
+actor Gestor
+actor Operador
+actor Motorista
+actor Mecânico
+rectangle FrotaLab {
+  usecase "Gerenciar acessos" as A
+  usecase "Manter cadastros" as C
+  usecase "Consultar alertas" as L
+  usecase "Analisar relatórios" as R
+  usecase "Planejar rotas" as P
+  usecase "Executar entregas" as E
+  usecase "Registrar abastecimento" as B
+  usecase "Registrar manutenção" as M
+  usecase "Anexar documentos" as D
+}
+Administrador -- A
+Administrador -- C
+Gestor -- C
+Gestor -- L
+Gestor -- R
+Gestor -- D
+Operador -- P
+Operador -- L
+Motorista -- E
+Motorista -- B
+Mecânico -- M
+@enduml

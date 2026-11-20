@@ -1,0 +1,126 @@
+.brand {
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+  letter-spacing: -1px;
+  font-weight: 700;
+  gap: 9px;
+}
+.brand-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--green);
+  color: #fff;
+  width: 37px;
+  height: 37px;
+  border-radius: 10px;
+}
+.brand-dot {
+  color: #d6a362;
+  margin-left: -9px;
+}
+.brand.light {
+  color: white;
+}
+.brand.light .brand-icon {
+  background: #ffffff15;
+  color: #e3dab9;
+}
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  border-radius: 7px;
+  padding: 11px 17px;
+  font-size: 13px;
+  font-weight: 600;
+  white-space: nowrap;
+  border: 1px solid transparent;
+  transition:
+    background 0.15s,
+    transform 0.15s;
+}
+.button:hover {
+  transform: translateY(-1px);
+}
+.button.primary {
+  color: white;
+  background: var(--green);
+  box-shadow: 0 2px 3px #244e3e0c;
+}
+.button.primary:hover {
+  background: #193f30;
+}
+.button.secondary {
+  background: white;
+  border-color: var(--line);
+  color: #475c4c;
+}
+.button.small {
+  padding: 8px 13px;
+  font-size: 12px;
+}
+.button.full {
+  width: 100%;
+}
+.icon-button {
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  color: #6a776e;
+}
+.icon-button:hover {
+  background: #eef2e9;
+  color: var(--green);
+}
+.icon-button.danger:hover {
+  background: #fff0ed;
+  color: var(--red);
+}
+.text-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--green);
+}
+.eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  letter-spacing: 1.7px;
+  font-size: 10px;
+  font-weight: 700;
+  color: #6b8071;
+}
+.muted {
+  color: var(--muted);
+}
+.live-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 100%;
+  background: #739965;
+  display: inline-block;
+  box-shadow: 0 0 0 4px #73996515;
+}
+.icon-box {
+  width: 44px;
+  height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 11px;
+  flex-shrink: 0;
+}
+.icon-box.green {
+  background: #eaf1e6;
+  color: #426547;
+}

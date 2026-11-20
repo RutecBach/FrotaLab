@@ -1,0 +1,16 @@
+packages:
+  - front-end
+  - back-end
+overrides:
+  multer: ^2.5.0
+packageExtensions:
+  '@nestjs/platform-express@11':
+    dependencies:
+      rxjs: ^7.8.2
+allowBuilds:
+  '@scarf/scarf': false
+  '@embedded-postgres/windows-x64': true
+  '@embedded-postgres/linux-x64': true
+  '@nestjs/core': true
+  sharp: true
+  unrs-resolver: true
